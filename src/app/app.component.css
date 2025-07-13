@@ -1,0 +1,137 @@
+/* Root layout */
+:host {
+  display: block;
+  padding: 24px;
+  font-family: "Inter", Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Top toolbar: filter + export */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  flex: 0 0 250px; /* shrink to fixed width */
+  max-width: 100%;
+  font-size: 14px;
+}
+
+
+button[mat-raised-button] {
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-transform: none;
+  box-shadow: 0 3px 6px rgba(63, 81, 181, 0.3);
+  transition: all 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  box-shadow: 0 5px 12px rgba(63, 81, 181, 0.5);
+}
+
+/* Table style */
+table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+th.mat-header-cell {
+  background-color: #eef1f6;
+  font-weight: 700;
+  color: #333;
+  font-size: 14px;
+  padding: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td.mat-cell {
+  font-size: 14px;
+  color: #444;
+  padding: 14px;
+}
+
+tr.mat-row:nth-child(even) {
+  background-color: #f9fbfc;
+}
+
+tr.mat-row:hover {
+  background-color: #e3f2fd;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+/* Status badge */
+.status-active,
+.status-inactive {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.status-active {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+}
+
+.status-inactive {
+  background-color: #fdecea;
+  color: #c62828;
+}
+
+.status-active mat-icon,
+.status-inactive mat-icon {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* Paginator styling */
+mat-paginator {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  border-radius: 0 0 12px 12px;
+  margin-top: -4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  mat-form-field,
+  button[mat-raised-button] {
+    width: 100%;
+  }
+
+  table {
+    font-size: 13px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  mat-form-field {
+    flex: 1 1 100%;
+  }
+}
