@@ -13,6 +13,13 @@ An Angular dashboard application that displays a list of users, their status, an
 - 📱 Responsive Material Design
 
 ---
+## 🖼️ Preview
+
+> Displays structured JSON with collapsible and searchable interface  
+> <img width="1920" height="848" alt="OutputDemo" src="https://github.com/user-attachments/assets/0dd131fd-e560-4694-b2ad-91271fba25b3" />
+
+
+---
 
 ## 🛠️ Tech Stack
 
